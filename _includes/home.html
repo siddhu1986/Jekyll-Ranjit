@@ -1,0 +1,151 @@
+<div class="my-content">
+  
+      <div class="container" style="width:100%;padding:0px;max-width: inherit;">
+        <div class="row topbanner">
+          <div class="msk"></div>
+
+          
+            <div style="position: relative;line-height: 1em;">{{page.main_heading}}</div>
+
+
+            <div style="position: absolute;font-size: 16px;bottom:50px;color:#ccc;">{{page.main_subheading}}</div>
+
+
+            <div class="logo_secondary"><img src="{{ '/assets/images/04_CtrlO_white.svg' | relative_url }}" /></div>
+          
+          <!-- <img src="ctrlo-white.svg" style="    height: 40px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 10px;" /> -->
+          {% include navmenu.html %}
+            
+
+
+          <div class="col-md-12">
+            <div></div>
+          </div>
+        </div>
+        
+
+        <div class="row padX" style="background-color:#524364;color:#fff;">
+          <div class="col-md-4" style="padding-right: 20px;">
+            <div style="font-size:30px;line-height: 1.2em;">{{page.section1_header}}</div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-12" style="padding-bottom: 90px;">
+                {{page.section1_header_right}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-4 prelative">
+                <div class="vline-left-white"></div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+                    <span><img src="{{ '/assets/images/icon.png' | relative_url }}" class="micon" /></span>    
+                  </div>
+                </div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+
+                    <span class="bold-title">Ministry of Justice</span>    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 col-4 prelative">
+                <div class="vline-left-white"></div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+                    <span><img src="{{ '/assets/images/icon.png' | relative_url }}" class="micon" /></span>    
+                  </div>
+                </div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+                    <span class="bold-title">Ministry of Defence</span>    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-4 prelative">
+                <div class="vline-left-white"></div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+                    <span><img src="{{ '/assets/images/icon.png' | relative_url }}" class="micon" /></span>    
+                  </div>
+                </div>
+                <div class="row padleft10">
+                  <div class="col-md-12">
+                    <span class="bold-title">Ministry of Justice</span>    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-image:url(assets/images/banner2.png);height:600px;" class="banner">
+          
+        </div>
+
+        <div class="row">
+          
+          {% for item in page.features %}
+          <div class="col-md-3 padded40 section-features">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="{{ '/assets/images/' | append: item.icon | relative_url }}" class="micon2" />
+              </div>
+            </div>
+            <div class="row mtop20">
+              <div class="col-md-12">
+                
+                  <div class="mhead">{{item.title}}</div>
+                  <div class="hline"></div>
+                  <div class="mdescription">
+                    {{item.description}}
+                  </div>  
+                
+                
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+        
+        {% for item in page.twoboxes_block1 %}
+        <div class="row section-twoblock spacer-top">
+          <div class="col-md-6" style="padding-right:0px;">
+            <div class="banner" style="background-image:url({{ '/assets/images/' | append: item.banner | relative_url }});height:400px;"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="row padded40">
+              <div class="col-md-12">
+                <div class="mheader1">{{item.heading}}</div>
+                <div class="mheader2">{{item.subheading}}</div>
+                <div class="mpara">{{item.description}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+        {% for item in page.twoboxes_block2 %}
+        <div class="row section-twoblock">
+          <div class="col-md-6">
+            <div class="row padded40">
+              <div class="col-md-12">
+                <div class="mheader1">{{item.heading}}</div>
+                <div class="mheader2">{{item.subheading}}</div>
+                <div class="mpara">{{item.description}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding-left:0px;">
+            <div class="banner" style="background-image:url({{ '/assets/images/' | append: item.banner | relative_url }});height:400px;"></div>
+          </div>
+        </div>
+        {% endfor %}
+        
